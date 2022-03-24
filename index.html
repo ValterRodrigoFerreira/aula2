@@ -10,48 +10,65 @@
 
 <body>
     <h1 class="title">Faça o seu cadastro</h1>
-    <div class="container">
-        <div class="name">
-            <label for="name-field"> Nome Completo</label>
-            <input class="info-box" type="text" placeholder="Digite seu nome completo" id="nome-field">
-        </div>
-        <div class="boxwrapper">
-            <div class="box">
-                <label class="label-data">Data de Nasimento</label>
-                <input class="data" type="date">
+    <section class="container">
+        <form class="form">
+            <div class="name">
+                <label for="name-field"> Nome Completo</label>
+                <input class="info-box" type="text" placeholder="Digite seu nome completo" id="nome-field" required>
             </div>
-            <div class="box">
-                <label class="label-pais">País<span>*</span></label>
-                <select class="datapais">
-                    <option>Brasil</option>
-                    <option>Argentina</option>
-                    <option>Paraguai</option>
-                </select>
+            <div class="boxwrapper">
+                <div class="boxdatapais">
+                    <label class="label-data">Data de Nasimento</label>
+                    <input class="data" type="date" required>
+                </div>
+                <div class="boxdatapais">
+                    <label class="label-pais">País<span class="text-asterisco">*</span></label>
+                    <select class="datapais" required>
+                        <option>Brasil</option>
+                        <option>Argentina</option>
+                        <option>Paraguai</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="boxwrappergenero">
-            <label class="genero">Genero:</label>
-            <input class="input-genere" type="radio" name="input-genere" id="" /> Feminino
-            <input class="input-genere" type="radio" name="input-genere" id="" /> Masculino
-            <input class="input-genere" type="radio" name="input-genere" id="" /> Não declarar
-        </div>
-        <div class="email">
-            <label class="email">Email</label>
-            <input class="info-box" type="email" placeholder="seuemail@dominio.com" />
-        </div>
-        <div class="senha">
-            <label class="label-field">Senha</label>
-            <input class="info-box" type="password" placeholder="Digite sua senha" />
-        </div>
-        <div class="confirmarsenha">
-            <label>Confirmar Senha</label>
-            <input class="info-box" type="password" placeholder="Confirme sua senha">
-        </div>
-        <p> <input type="checkbox" /> Aceite os <a href="/">termos e condições</a> e concordo com as <a href="/">políticas de privacidade</a> do Hall to Code.</p>
-        <input type="submit" valeu="Cadastrar" class="cadastrar">
+            <div class="box-genero">
+                <span class="genero-text">Gênero:</span>
+                <div class="option-genero">
+                    <div class="select-genero">
+                        <input type="radio" name="input-genere" id="" required />
+                        <label>Feminino</label>
+                    </div>
 
-        <p>Já tem uma conta no Hall to Code? <a href="/">Entre agora</a></p>
-    </div>
+                    <div class="select-genero">
+                        <input type="radio" name="input-genere" id="" />
+                        <label>Masculino</label>
+                    </div>
+
+                    <div class="select-genero">
+                        <input type="radio" name="input-genere" id="" />
+                        <label>Não declarar</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="email">
+                <label class="email">Email</label>
+                <input class="info-box" type="email" placeholder="seuemail@dominio.com" required />
+            </div>
+            <div class="senha">
+                <label class="label-field">Senha</label>
+                <input class="info-box" type="password" placeholder="Digite sua senha" required />
+            </div>
+            <div class="confirmarsenha">
+                <label>Confirmar Senha</label>
+                <input class="info-box" type="password" placeholder="Confirme sua senha" required />
+            </div>
+            <p> <input type="checkbox" required /> Aceite os <a href="/">termos e condições</a> e concordo com as <a href="/">políticas de privacidade</a> do Hall to Code.</p>
+            <button class="button">Cadastrar</button>
+
+            <p>Já tem uma conta no Hall to Code? <a href="/login.html">Entre agora</a></p>
+            </div>
+        </form>
+    </section>
 </body>
 
 </html>
